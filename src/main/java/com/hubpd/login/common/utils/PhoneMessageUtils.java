@@ -38,7 +38,7 @@ public class PhoneMessageUtils {
         //生成验证码-随机四个阿拉伯数据
         String strPhoneCode = get4IntegerString();
         String time = new Date().getTime() + "";
-        String content = Constants.MESSAGE_CONTENT_MOULD + strPhoneCode;
+        String content = Constants.MESSAGE_CONTENT_MOULD_PREFIX + strPhoneCode + Constants.MESSAGE_CONTENT_MOULD_SUFFIX;
 
         try {
             //封装请求参数

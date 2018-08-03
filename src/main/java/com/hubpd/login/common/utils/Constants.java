@@ -36,8 +36,10 @@ public class Constants {
     public static String MESSAGE_URL;
     /** 手机验证码加盐格式 */
     public static String MESSAGE_SALT_MSG;
-    /** 手机验证码输出模板 */
-    public static String MESSAGE_CONTENT_MOULD;
+    /** 手机验证码输出模板--前缀 */
+    public static String MESSAGE_CONTENT_MOULD_PREFIX;
+    /** 手机验证码输出模板--后缀 */
+    public static String MESSAGE_CONTENT_MOULD_SUFFIX;
     /**  短信接口相关信息----end */
 
     @Value("${phone_num_reg}")
@@ -76,9 +78,13 @@ public class Constants {
         this.MESSAGE_SALT_MSG = messageSaltMsg;
     }
 
-    @Value("${message_content_mould}")
-    public void setMessageContentMould(String messageContentMould) {
-        this.MESSAGE_CONTENT_MOULD = messageContentMould;
+    @Value("${message_content_mould_prefix}")
+    public void setMessageContentMouldPrefix(String messageContentMouldPrefix) {
+        this.MESSAGE_CONTENT_MOULD_PREFIX = messageContentMouldPrefix;
+    }
+    @Value("${message_content_mould_suffix}")
+    public void setMessageContentMouldSuffix(String messageContentMouldSuffix) {
+        this.MESSAGE_CONTENT_MOULD_SUFFIX = messageContentMouldSuffix;
     }
 
 
